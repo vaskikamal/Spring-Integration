@@ -27,4 +27,18 @@ public class SayHelloService {
 		return name;
 		
 	}
+	
+	@ServiceActivator(inputChannel = "errorOutputChannel")//, outputChannel="inputToKafka")
+	public void sayHelloException(Message<Exception> name) {
+		System.out.println("################################");
+		System.out.println("################################");
+		System.out.println("################################");
+		System.out.println("##  " +  name.getPayload() + "!!!");
+		System.out.println("##  " +  name.getHeaders() + "!!!");
+
+		System.out.println("################################");
+		
+		System.out.println("################################");
+		System.out.println("################################");
+	}
 }

@@ -22,9 +22,9 @@
 		<integration:recipient channel="rethrowChannel" />
 	</integration:recipient-list-router>
 
-	<jms:outbound-channel-adapter id="errorQueueChannelAdapter"
+	<!-- jms:outbound-channel-adapter id="errorQueueChannelAdapter"
 		channel="errorOutputChannel" destination="errorQueue" connection-factory="jmsConnectionfactory"
-		delivery-persistent="true" explicit-qos-enabled="true" />
+		delivery-persistent="true" explicit-qos-enabled="true" /-->
 
 
 	<int-kafka:outbound-channel-adapter
